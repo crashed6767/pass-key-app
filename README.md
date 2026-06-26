@@ -31,7 +31,7 @@ This lets you add a **"Log in with passkey"** button to apps that only have old 
 ## Quick start
 
 ```bash
-git clone https://github.com/YOUR_GITHUB_USER/pass-key-app.git
+git clone https://github.com/crashed6767/pass-key-app.git
 cd pass-key-app
 cp .env.example .env
 node scripts/generate-secrets.mjs

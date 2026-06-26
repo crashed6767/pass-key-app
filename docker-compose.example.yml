@@ -7,9 +7,9 @@ services:
     restart: unless-stopped
 
   pass-key-app:
-    image: ghcr.io/YOUR_GITHUB_USER/pass-key-app:latest
-    # Or build locally:
-    # build: .
+    build: .
+    # Or use a published image if you publish one:
+    # image: ghcr.io/crashed6767/pass-key-app:latest
     container_name: pass-key-app
     env_file:
       - ./.env
