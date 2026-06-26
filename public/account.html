@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Passkeys</title>
+  <link rel="stylesheet" href="/passkey/assets/style.css">
+</head>
+<body>
+  <main class="card">
+    <div class="logo">PK</div>
+    <h1><span id="app-name">Pass Key App</span> passkeys</h1>
+    <p id="account-summary" class="muted">Loading…</p>
+    <button id="add-passkey-button" class="primary">Add another passkey</button>
+    <form method="post" action="/passkey/logout">
+      <button class="secondary" type="submit">Log out</button>
+    </form>
+    <p id="message" class="message" role="status" aria-live="polite"></p>
+    <p class="small"><a href="/">Back to app</a></p>
+  </main>
+  <script src="/passkey/assets/app.js"></script>
+</body>
+</html>

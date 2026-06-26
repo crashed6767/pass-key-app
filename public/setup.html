@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Create passkey</title>
+  <link rel="stylesheet" href="/passkey/assets/style.css">
+</head>
+<body>
+  <main class="card">
+    <div class="logo">PK</div>
+    <h1>Create a passkey</h1>
+    <p class="muted">This creates a passkey for this app hostname. The private key stays in your device, password manager, or security key.</p>
+    <button id="setup-button" class="primary">Create passkey</button>
+    <p id="message" class="message" role="status" aria-live="polite"></p>
+    <p class="small">After setup, the app URL will require this passkey first.</p>
+  </main>
+  <script src="/passkey/assets/app.js"></script>
+</body>
+</html>

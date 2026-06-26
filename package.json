@@ -1,0 +1,28 @@
+{
+  "name": "pass-key-app",
+  "version": "1.0.0",
+  "private": false,
+  "type": "module",
+  "description": "Reusable passkey/WebAuthn gate and reverse proxy for apps that do not support passkeys natively.",
+  "scripts": {
+    "start": "node src/server.mjs",
+    "test": "node --test",
+    "check": "node --check src/*.mjs test/*.mjs scripts/*.mjs && npm audit --omit=dev"
+  },
+  "keywords": [
+    "passkey",
+    "webauthn",
+    "fido2",
+    "reverse-proxy",
+    "authentication"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@simplewebauthn/server": "13.3.2",
+    "express": "4.22.2",
+    "http-proxy": "1.18.1"
+  }
+}

@@ -1,0 +1,22 @@
+services:
+  # Replace this with the app you want to protect, or attach this proxy to an
+  # existing Docker network and point UPSTREAM_ORIGIN at that app.
+  example-app:
+    image: nginx:alpine
+    container_name: example-app
+    restart: unless-stopped
+
+  pass-key-app:
+    image: ghcr.io/YOUR_GITHUB_USER/pass-key-app:latest
+    # Or build locally:
+    # build: .
+    container_name: pass-key-app
+    env_file:
+      - ./.env
+    volumes:
+      - ./data:/data
+    ports:
+      - "127.0.0.1:8091:8091"
+    depends_on:
+      - example-app
+    restart: unless-stopped
